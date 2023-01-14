@@ -32,9 +32,9 @@ class CreateItemTest(CliTestCase):
             collection = pystac.Collection.from_file(str(destination))
 
             assert collection.id == "sentinel1-grd"
-            collection.set_self_href(
-                str(destination)
-            )  # Must set the self reference to pass validation
+            # collection.set_self_href(
+            #    str(destination)
+            # )  # Must set the self reference to pass validation
             collection.validate()
 
     def test_create_item(self) -> None:
